@@ -17,10 +17,10 @@ brute-force attacks.
     2026-10-07 14:01:45 203.0.113.50 LOGIN_FAIL root
 
 ## Example output
-Connections per IP: {'192.168.1.10': 2, '203.0.113.50': 6, '192.168.1.11': 1, '198.51.100.7': 2}
-Failed logins per IP: {'203.0.113.50': 5, '198.51.100.7': 1}
-Suspicious IPs: ['203.0.113.50']
-Successful brute force: {'203.0.113.50'}
+    Connections per IP: {'192.168.1.10': 2, '203.0.113.50': 6, '192.168.1.11': 1, '198.51.100.7': 2}
+    Failed logins per IP: {'203.0.113.50': 5, '198.51.100.7': 1}
+    Suspicious IPs: ['203.0.113.50']
+    Successful brute force: {'203.0.113.50'}
 
 ## Limitations
 - Threshold is not time-based (5 failures in a year ≠ 5 in a minute)
