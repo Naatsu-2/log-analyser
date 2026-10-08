@@ -9,8 +9,24 @@ brute-force attacks.
 - Detects successful logins that follow repeated failures,
   a sign of a compromised account
 
-## Usage
-    python3 log_analyzer.py
+## Project structure
+
+| File | Role |
+|---|---|
+| `log_analyser.py` | **Main script.** Imports the modules below and prints the report |
+| `count_ip.py` | `count_ip(path)`: connections per IP address |
+| `count_failure.py` | `count_failure(path)`: failed logins per IP address |
+| `suspicious_ips.py` | `suspicious_ips(failure_count, threshold)`: IPs with too many failures |
+| `bruteforce.py` | `find_successful_bruteforce(path, threshold)`: successful logins after repeated failures |
+| `connexions.log` | Sample log file (fictional data) |
+
+`log_analyser.py` imports the other modules, so you only need to run that one:
+
+    python3 log_analyser.py
+
+## Requirements
+Python 3, no external libraries.
+
 
 ## Log format
     DATE TIME IP STATUS USER
